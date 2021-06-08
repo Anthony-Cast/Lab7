@@ -13,3 +13,5 @@ let locales = ["Pontificia Universidad Católica del Perú",
 
 // Para generar la información si es miembro de mesa
 let cargos = ["Presidente", "Secretario", "Tercer Miembro", "Primer Suplente", "Segundo Suplente", "Tercer Suplente"]
+
+

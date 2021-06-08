@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="css/common.css">
   <title>Resultado</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/resultado.js"></script>
+  <script>
+    $(document).ready(function obtenerDatos(){
+      console.log("HOLA");
+      $("#nombre").html(nombres[Math.floor(Math.random() * 10)] + ' '
+        + apellidos[Math.floor(Math.random() * 10)] + ' '
+        + apellidos[Math.floor(Math.random() * 10)])
+      $("#localdevotacion").html(locales[Math.floor(Math.random() * 6)])
+      $("#mesa").html(Math.floor(Math.random() *(999 - 100) + 100))
+    });
+  </script>
+
 </head>
 
 <body>
@@ -19,6 +32,19 @@
 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
   <div class="container">
     <div class="card">
+
+        <h1 class="card-title" style="float: start">Nombre:</h1>
+
+        <p id="nombre"></p>
+
+        <h1 class="card-title">Local de votacion:</h1>
+
+        <p id="localdevotacion"></p>
+
+        <h1 class="card-title">Mesa:</h1>
+
+        <p id="mesa"></p>
+
     </div>
   </div>
 </div>
@@ -29,6 +55,7 @@
   </div>
 </div>
 </hr>
-<script src="js/resultado.js"></script>
+
+
 </body>
 </html>
