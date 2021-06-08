@@ -11,28 +11,29 @@
   <script src="js/resultado.js"></script>
   <script>
     $(document).ready(function obtenerDatos(){
-      console.log("HOLA");
       $("#nombre").html(nombres[Math.floor(Math.random() * 10)] + ' '
         + apellidos[Math.floor(Math.random() * 10)] + ' '
         + apellidos[Math.floor(Math.random() * 10)])
       $("#localdevotacion").html(locales[Math.floor(Math.random() * 6)])
       $("#mesa").html(Math.floor(Math.random() *(999 - 100) + 100))
       $("#card2").hover(function ObtenerInfo(){
+        document.getElementById("fondo").style.background="white";
         var random_boolean = Math.random() < 0.5;
         if(random_boolean){
-          $("#textocambiar").html("<h1>Usted no es miembro de mesa</h1>");
+          $("#textocambiar").html("<div class='card-title' style='text-align: center'>Usted no es miembro de mesa</div>");
           $("#cargotexto").hide();
           $("#cargo").hide();
 
         }else{
-          $("#textocambiar").html("<h1>Usted si es miembro de mesa</h1>");
+          $("#textocambiar").html("<div class='card-title' style='text-align: center'>Usted si es miembro de mesa</div>");
           $("#cargotexto").show();
           $("#cargo").show();
           $("#cargo").html(cargos[Math.floor(Math.random() * 6)]);
         }
       })
       $("#card2").mouseleave(function CambiarInfo(){
-          $("#textocambiar").html("<h1>Pase el mouse encima para conocer si es miembro de mesa</h1>");
+          document.getElementById("fondo").style.background="gray";
+          $("#textocambiar").html("<div class='card-title' style='text-align: center'>Pase el mouse encima para conocer si es miembro de mesa</div>");
           $("#cargotexto").hide();
           $("#cargo").hide();
       })
@@ -46,36 +47,44 @@
   <nav>
   </nav>
 </header>
-<a class="titulo">Resultado de consulta de local de votación y miembro de mesa</a>
 <div class="container">
-<div class="col-xl-6">
-    <div class="card">
-      <div class="card-title">
-          Nombre:
-      </div>
-      <div class="card-text" id="nombre">
-      </div>
-      <div class="card-title">
-        Local de Votación:
-      </div>
-      <div class="card-text" id="localdevotacion">
-      </div>
-      <div class="card-title">
-        Mesa:
-      </div>
-      <div class="card-text" id="mesa">
-      </div>
-    </div>
+  <div class="titulo" style="text-align: center;padding-left: 200px;padding-right: 200px">Resultado de consulta de local de votación y miembro de mesa</div>
 </div>
-<div  class="col-xl-4 col-lg-4 col-md-4 col-sm-12" >
   <div class="container">
-    <div class="card" id="card2">
-      <div class="card-title" id="textocambiar">Pase el mouse encima para conocer si es miembro de mesa</div>
-      <div class="card-title" style="display: none" id="cargotexto">Cargo:</div>
-      <div class="card-data"  style="display: none" id="cargo">Cargo:</div>
-    </div>
-</div>
-</div>
-
+  <div class="col-xl-6">
+      <div class="card">
+        <br>
+        <div class="card-title">
+            Nombre:
+        </div>
+        <div class="card-text" id="nombre">
+        </div>
+        <div class="card-title">
+          Local de Votación:
+        </div>
+        <div class="card-text" id="localdevotacion">
+        </div>
+        <div class="card-title">
+          Mesa:
+        </div>
+        <div class="card-text" id="mesa">
+        </div>
+      </div>
+  </div>
+  <div class="col-xl-6" id="card2">
+      <div class="card" style="background: gray;" id="fondo">
+        <br><br>
+        <div class="card-title" id="textocambiar">
+          Pase el mouse encima para conocer si es miembro de mesa
+        </div>
+        <div class="card-text" style="display: none" id="cargotexto">
+          Cargo:
+        </div>
+        <div class="card-text"  style="display: none" id="cargo">
+        </div>
+      </div>
+  </div>
+  </div>
+<button onclick="redPagprinc()"class="button" type="button">Regresar</button>
 </body>
 </html>

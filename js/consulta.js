@@ -15,8 +15,11 @@ function toggle() {
 function verificarDni(){
   var dni=document.getElementById("dni").value;
   if(dni.length!=8){
-    document.getElementById("dni").style.boxShadow="0 0 0 .2rem rgba(255, 0, 0, 1)";
-    document.getElementById("texto").innerHTML="<h2 style='color: red'>El DNI ingresado no es válido</h2>"
+    document.getElementById("dni").className="dni_input_error";
+    document.getElementById("texto").innerHTML="<h3>El DNI ingresado no es válido</h3>";
+  }
+  else{
+    document.location.href="resultado.html";
   }
 }
 
