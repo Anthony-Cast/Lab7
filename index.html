@@ -7,19 +7,18 @@
   <link rel="stylesheet" href="css/common.css">
   <title>Consulta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
 </head>
 
 <body>
   <header>
     <nav>
-  <a id="displayText"  href="javascript:toggle();" name="displayText">
-    <img id="image_3395978" class="img_onpe" src="img/onpe2.svg"
-    onmouseover="this.src='img/onpe1.jpg'"
-    onmouseout="this.src='img/onpe2.svg'"/></a>
-  <div id="toggleText" style="display: none">
-   </nav>
-  </header> 
+      <a id="displayText" onclick='toggle()' name="displayText">
+        <img id="image_3395978" class="img_onpe" src="img/onpe2.svg"/>
+        <div id="toggleText" style="display: none">Texto</div>
+      </a>
+    </nav>
+  </header>
   <a class="titulo">Consulta tu local de votación y si eres miembro de mesa</a>
   <hr>
         <div class="row">
@@ -29,7 +28,7 @@
           </div>
           <div class="row">
               <div class="col-12" mb-10>
-                  <button type = "button" class="button" id="send">Consultar</button>                   
+                  <button type = "button" class="button" id="send">Consultar</button>
               </div>
           </div>
   </hr>
