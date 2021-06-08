@@ -1,0 +1,27 @@
+.img_onpe {
+  width: 30rem;
+  padding: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+}
+
+#dni_input {
+  font-size: 2em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.dni_input_error {
+  border-color: red !important;
+}
+
+.error_message{
+  color: red;
+  margin: 0;
+}
