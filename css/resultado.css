@@ -8,9 +8,6 @@
   height: 60vh;
   background: white;
   margin: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .card-not-hover {
